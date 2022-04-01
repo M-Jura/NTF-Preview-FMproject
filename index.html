@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet"> 
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+      body {
+        background-color: hsl(217, 54%, 11%);
+        box-sizing: border-box;
+        font-family: 'Outfit', sans-serif;
+        font-size: 18px;
+        font-weight: 300, 400, 600;      
+      }
+
+      h1 {
+        
+        font-weight: 600;
+        font-size: 1.5em;
+      }
+
+      .link, h1 {
+        color: hsl(0, 0%, 100%);
+        
+      }
+
+      p {
+        color: hsl(215, 51%, 70%);
+        line-height: 1.5em;
+        font-size: 1em;
+      }     
+
+      .main-container {
+        height: 95vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      } 
+
+      .card {
+        width: fit-content;
+        background-color: hsl(216, 50%, 16%);
+        padding: 30px;
+        border-radius: 15px;
+      }
+
+      .content {           
+        width: 360px;        
+      }
+
+      .content img {         
+        max-width: 100%;
+        vertical-align: text-bottom;
+        border-radius: 15px;
+      }
+
+      .offer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 15px 0;
+        padding-bottom: 15px;
+        border-bottom: 1px solid hsl(215, 32%, 27%);
+      }
+
+      .offer img {
+        align-items: middle;
+        margin-right: 0.5em;        
+      }
+
+      .price {        
+        color: hsl(178, 100%, 50%);
+        display: flex;
+        align-items: center;                    
+      }
+
+      .days {       
+        color: hsl(215, 51%, 70%);         
+        display: flex;
+        align-items: center;
+      }
+
+      .creator {
+        height: 30px;
+        display: flex;
+        align-items: center;
+        color: hsl(215, 51%, 70%);
+      }
+      
+      .creator img {
+        width: 30px;
+        border: 2px solid hsl(0, 0%, 100%);
+        border-radius: 30px;
+        margin-right: 1rem;
+      }
+
+      .link:active {
+        color: hsl(178, 100%, 50%);
+        cursor: grab;        
+      }
+
+      .image {
+        position: relative;
+      }
+
+      .overlay{
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: hsl(178, 100%, 50%);
+        opacity: 0;
+        border-radius: 15px;
+      }      
+
+      .image:active .overlay{
+        opacity: 0.3;
+        cursor: grab;        
+      }
+
+      .icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+      }
+
+      .image:active .icon {
+        opacity: 1;      
+      }
+            
+  </style>
+</head>
+<body>
+  <div class="main-container">
+    <div class="card">
+      <div class="content">
+        <div class="image">
+          <img src="images/image-equilibrium.jpg" alt="equilibrium" class="link">     
+          <div class="overlay"></div>  
+          <img class="icon" src="images/icon-view.svg">
+                            
+        </div>
+
+        <h1 class="link"> Equilibrium #3429</h1>
+        <div class="desc">
+          <p>Our Equilibrium collection promotes balance and calm.</p>
+        </div>
+        <div class="offer">
+          <div class="price">
+            <img src="images/icon-ethereum.svg"><span>0.041 ETH</span> 
+          </div>
+          <div class="days">
+            <img src="images/icon-clock.svg"><span>3 days left</span> 
+          </div>
+        </div> 
+        <div class="creator">
+          <img src="images/image-avatar.png" alt="avatar"><span>Creation of <span class="link">Jules Wyvern</span></span></div>
+      </div>
+    </div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Matija Jurković</a>.
+  </div>
+
+
+</body>
+</html>
